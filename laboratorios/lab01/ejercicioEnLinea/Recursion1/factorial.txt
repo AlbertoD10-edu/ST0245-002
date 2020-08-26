@@ -1,0 +1,9 @@
+public int factorial(int n) {
+  int An  = 0;
+  if(n == 1 ){ 
+return 1;    
+  }else{
+   An += n * factorial(n-1);
+   return An;
+  }
+  }

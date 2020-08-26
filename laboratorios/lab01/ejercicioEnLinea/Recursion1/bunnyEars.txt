@@ -1,0 +1,8 @@
+public int bunnyEars(int bunnies) {
+  int cont = 0;
+  if(bunnies == 0){
+    return 0;
+  }else{
+    return 2 + bunnyEars(bunnies-1);
+  }
+  }
