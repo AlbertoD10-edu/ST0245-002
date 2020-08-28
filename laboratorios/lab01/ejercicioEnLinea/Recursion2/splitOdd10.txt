@@ -1,0 +1,13 @@
+public boolean splitOdd10(int[] nums) {
+  int ind = 0;
+  int suma = 0;
+  int suma2 = 0;
+ return  Recorrer(nums , ind , suma , suma2);
+}
+private boolean Recorrer(int[]nums , int ind , int suma , int suma2){
+  if(ind >=nums.length){
+    return (suma%10 == 0 && suma2%2 != 0) || (suma2%10 == 0 && suma%2 != 0);
+  }
+  int val = nums[ind];
+  return (Recorrer(nums , ind+1 ,suma + val , suma2) || Recorrer(nums , ind +1 , suma , suma2 + val));
+}

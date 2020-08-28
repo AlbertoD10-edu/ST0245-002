@@ -1,0 +1,14 @@
+public boolean splitArray(int[] nums) {
+  int ind = 0;
+  int suma1 = 0;
+  int suma2 = 0;
+  return RecorrerA(nums, ind, suma1, suma2);
+}
+public boolean RecorrerA ( int[] nums, int ind, int suma1, int suma2 ) {
+  if ( ind >= nums.length ) {
+    return suma1 == suma2;
+  }
+  int value = nums[ind];
+  return (RecorrerA(nums, ind + 1, suma1 + value, suma2) ||
+    RecorrerA(nums, ind + 1, suma1, suma2 + value));
+}
